@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="NCIE-Logo_FullColor.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NCIE Control Chart Generator</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // Set initial theme class before React loads to prevent flash
+      (function () {
+        const savedTheme = localStorage.getItem("hthgse-theme");
+        const isDark = savedTheme === "dark";
+        document.documentElement.classList.add(isDark ? "dark" : "light");
+      })();
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
